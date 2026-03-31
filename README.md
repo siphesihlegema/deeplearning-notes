@@ -11,3 +11,5 @@ The ultimate goal of this project is to develop a deep mathematical understandin
 ## Tech Stack
 * Python
 * NumPy
+
+> all this is in my *obsidian vault*
