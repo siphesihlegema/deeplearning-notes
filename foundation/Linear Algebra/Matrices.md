@@ -1,4 +1,4 @@
-# Matrix multiplication
+## Matrix multiplication
 
 Let $A$ be an $m \times n$ matrix and *B* be an $n \times p$ matrix. Their product $C = AB$ is an $m \times p$ matrix where each entry is:
 $$
@@ -23,3 +23,5 @@ $$
 $$
 \therefore \; AB = \begin{pmatrix} 19 & 22 \\ 43 & 50 \end{pmatrix}
 $$
+## Properties
+
