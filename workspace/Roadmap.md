@@ -422,5 +422,3 @@ After completing this roadmap, you should be able to:
 
 **Most Important**: 
 **CODE FIRST, READ SECOND**. When you hit a chapter, try implementing before reading. Get stuck, THEN read the explanation. This builds intuition faster than passive reading.
-
-Good luck! The fact that you're asking for a roadmap shows you're serious. Stick to the implementation-heavy approach and you'll be building state-of-the-art models in no time.
