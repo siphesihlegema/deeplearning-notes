@@ -46,5 +46,18 @@ $$
 ### Average over the sample
 Now we average the per-example gradients over the minibatch $\mathcal{B}$:
 $$
+\frac{\partial \mathcal{L}_{\mathcal{B}}}{\partial \mathbf{w}} = \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \left( \mathbf{w}^{\top} \mathbf{x}^{(i)} + b - y^{(i)} \right) \mathbf{x}^{(i)} \\[15pt]
+$$
+$$
+\frac{\partial \mathcal{L}_{\mathcal{B}}}{\partial b} = \frac{1}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \left( \mathbf{w}^{\top} \mathbf{x}^{(i)} + b - y^{(i)} \right)
+$$
+Each sum loops over every example in the minibatch, computes the error for that example using the _current_ values of  $\mathbf{w}$ and $b$, and accumulates the gradient contribution. Dividing by $|\mathcal{B}|$ gives the average.
 
+### parameter update
+we move the parameters in the opposite direction of the gradient, scaled by the learning rate  $\eta > 0$
+$$
+\mathbf{w} \leftarrow \mathbf{w} - \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \mathbf{x}^{(i)} \left( \mathbf{w}^{\top} \mathbf{x}^{(i)} + b - y^{(i)} \right)
+$$
+$$
+b \leftarrow b - \frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \left( \mathbf{w}^{\top} \mathbf{x}^{(i)} + b - y^{(i)} \right)
 $$
