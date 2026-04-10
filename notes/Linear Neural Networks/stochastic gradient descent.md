@@ -35,7 +35,16 @@ $$
 \therefore
 $$
 $$
-\frac{e^{(i)}}{\partial\mathbf{w}} = e^{(i)} \ \cdot \ \mathbf{w}^{(i)} \ =  \ (\mathbf{w}^\top \mathbf{x}^{(i)} + b - y^{(i)}) \ \mathbf{x}^{(i)}
+\frac{\partial \ell^{(i)}}{\partial\mathbf{w}} = e^{(i)} \ \cdot \ \mathbf{w}^{(i)} \ =  \ (\mathbf{w}^\top \mathbf{x}^{(i)} + b - y^{(i)}) \ \mathbf{x}^{(i)}
 $$
 ### in terms of $b$
-we do the same chain rule here, but now its simpler because $\frac{\partial e^{(i)}}{\partial b} = 1$ hence:
+we do the same chain rule here, but now its simpler because $\frac{\partial e^{(i)}}{\partial b} = 1$ and $\frac{\partial \ell^{(i)}}{\partial e^{(i)}} = e^{(i)}$ 
+hence:
+$$
+\frac{\partial \ell^{(i)}}{\partial b} = e^{(i)} \cdot 1 = \mathbf{w}^{\top} \mathbf{x}^{(i)} + b - y^{(i)}
+$$
+### Average over the sample
+Now we average the per-example gradients over the minibatch $\mathcal{B}$:
+$$
+
+$$
