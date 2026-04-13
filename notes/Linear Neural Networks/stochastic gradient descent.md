@@ -1,6 +1,6 @@
 Stochastic Gradient Descent (SGD) reduces the computational latency of parameter updates by calculating the gradient on a single data point, or a small mini-batch, rather than the entire dataset. While this approach deviates from the mathematically "perfect" steepest descent direction of the full population, the resulting noise is often a functional advantage. High-precision direction is unnecessary for convergence; as long as the update maintains a general downward trajectory, the model can progress while simultaneously using the stochastic "jitter" to escape shallow local minima or saddle points that might trap a standard Batch Gradient Descent algorithm.
 
-The effectiveness of this sampling method is grounded in the fact that a randomly selected subset of data serves as an **unbiased estimator** of the true gradient. Mathematically, if the samples are drawn independently and identically distributed (IID), the expected value of the stochastic update equals the true gradient of the entire cost function: **$E[\nabla_{\theta} L_i(\theta)] = \nabla_{\theta} J(\theta)$**. Because the sample resembles the global distribution, the model receives enough signal to descend the loss landscape, even if individual steps are noisy. To ensure convergence to the global minimum, the learning rate $\eta$ must typically be decayed over time to dampen this variance as the model nears the optimum.
+The effectiveness of this sampling method is grounded in the fact that a randomly selected subset of data serves as an **unbiased estimator** of the true gradient. Mathematically, if the samples are drawn independently and identically distributed (IID), the [[expected value]] of the stochastic update equals the true gradient of the entire cost function: **$E[\nabla_{\theta} L_i(\theta)] = \nabla_{\theta} J(\theta)$**. Because the sample resembles the global distribution, the model receives enough signal to descend the [[loss landscape]], even if individual steps are noisy. To ensure convergence to the global minimum, the learning rate $\eta$ must typically be decayed over time to dampen this variance as the model nears the optimum.
 
 Now well go through the mathematical definition of it:
 
@@ -9,7 +9,7 @@ Now well go through the mathematical definition of it:
 $$
 \hat{y}^{(i)} = \mathbf{w}^{\top}\mathbf{x}^{(i)} + b
 $$
-### The loss function
+### The [[linear regression]]
 $$
 L(\mathbf{w}, b) = \frac{1}{n}\sum_{i = 1}^n J_{(w, b)}^{(i)} = \frac{1}{n} \sum_{i -1}^{n} \frac{1}{2} ((\mathbf{w}^{\top}\mathbf{x}^{i} + b) - y^{i})^{2}
 $$

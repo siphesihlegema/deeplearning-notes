@@ -10,15 +10,15 @@ $$
 $$
 notice we took a a transpose of w, because the inner dimensions need to be the same for matrix multiplication
 
-## Loss Function
+## [[linear regression]]
 We need to define a measure of fitness in order for us to even think about fitting our model to data. you know what the loss function does.
-There are different kinds of functions we could use to measure but for now we'll focus on the **Mean Squared Error (MSE)** loss function
+There are different kinds of functions we could use to measure but for now we'll focus on the **[[Mean Squared Error (MSE)]]** loss function
 $$
 J_{(w, b)}^{(i)} = \frac{1}{2}(\hat{y}^{i} - y^{i})^2
 $$
-![[Drawing 2026-04-08 11.53.43.excalidraw]]
+![[error_sketch .excalidraw]]
 
-for our function to best fit the data we need to minimize the sum or the MSE, this equation is called the **Loss function**
+for our function to best fit the data we need to minimize the sum or the [[Mean Squared Error (MSE)]], this equation is called the **Loss function**
 $$
 L(w, b) = \frac{1}{n}\sum_{i = 1}^n J_{(w, b)}^{(i)} = \frac{1}{n} \sum_{i -1}^{n} \frac{1}{2} ((w^{\top}x^{i} + b) - y^{i})^{2}
 $$
@@ -26,7 +26,7 @@ When we are training a a regression model we want to find parameters $(w^{*}, b^
 $$
 w^*, b^* = \underset{w,b}{argmin} \ L(w, b)
 $$
-## Analytical Solution
+## [[linear regression]]
 I thought i knew this but i actually don't at all. this changed me a bit, because I've always wondered can't we just one shot finding the minimum because we already  know that the loss landscape has one global minimum. At the time i was studying for calculus test and i thought off level curves could help do this (:
 
 The model we all know for linear regression can be written in another way:
@@ -84,7 +84,7 @@ $$ \mathbf{X}^\top \mathbf{X} \mathbf{w} - \mathbf{X}^\top \mathbf{y} = \mathbf{
 
 $$ \mathbf{X}^\top \mathbf{X} \mathbf{w} = \mathbf{X}^\top \mathbf{y} $$
 
-This is the **normal equation**.
+This is the [[linear regression]].
 
 
 $$ (\mathbf{X}^\top \mathbf{X})^{-1} \mathbf{X}^\top \mathbf{X} \mathbf{w} = (\mathbf{X}^\top \mathbf{X})^{-1} \mathbf{X}^\top \mathbf{y} $$

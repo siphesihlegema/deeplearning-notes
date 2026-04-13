@@ -3,11 +3,11 @@
 ## Phase 1: Foundations
 * **Tensor Operations:** Mastery of multi-dimensional arrays, broadcasting, and memory-efficient slicing.
 * **Gradient Calculation:** Understanding the chain rule and manual derivation of gradients for computational graphs.
-* **Linear Regression from Scratch:** Implementation of the forward pass, MSE loss, and Stochastic Gradient Descent (SGD) without high-level libraries.
+* **[[Linear Regression]] from Scratch:** Implementation of the forward pass, MSE loss, and [[Stochastic Gradient Descent]] (SGD) without high-level libraries.
 * **Softmax Classification:** Extending models to multi-class problems using cross-entropy loss and numerical stability techniques.
 
 ## Phase 2: Deep Networks & Optimization
-* **Multilayer Perceptrons (MLP):** Implementing hidden layers and non-linear activation functions (ReLU, Sigmoid, Tanh).
+* **Multilayer Perceptrons (MLP):** Implementing [[Hidden Layers]] and non-linear activation functions (ReLU, Sigmoid, Tanh).
 * **Manual Backpropagation:** Coding the backward pass logic to update weights across multiple layers.
 * **Regularization:** Implementing techniques to prevent overfitting, specifically Dropout and L2 Regularization (Weight Decay).
 * **Advanced Optimizers:** Moving from basic SGD to adaptive methods like Adam, RMSProp, and Adagrad.
